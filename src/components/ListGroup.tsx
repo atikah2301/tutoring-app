@@ -6,9 +6,12 @@ import { useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
+  // this property is a function that allows us to notify the App component
+  // of when an item has been selected
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: ListGroupProps) {
+function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   // declare that a variable will get its value from a function using = () => {} syntax
   const getMessage = () => {
@@ -20,6 +23,9 @@ function ListGroup({ items, heading }: ListGroupProps) {
 
   return (
     // empty angle brackets wrapping components creates a fragment, i.e. <div><div/>
+    // brackets in return to allow multi-line return
+    // component can only return 1 element
+    // to work around this, wrap multiple elements in a div
     <>
       <h1>{heading}</h1>
       {getMessage()}
@@ -41,6 +47,7 @@ function ListGroup({ items, heading }: ListGroupProps) {
               // a wrapper around the BaseEvent class
               onClick={() => {
                 setSelectedIndex(index);
+                onSelectItem(item);
               }}
               // unlike the use of getMessage, we are only referring to the function
               // not getting its output directly
@@ -52,10 +59,6 @@ function ListGroup({ items, heading }: ListGroupProps) {
       </ul>
     </>
   );
-
-  // brackets in return to allow multi-line return
-  // component can only return 1 element
-  // to work around this, wrap multiple elements in a div
 }
 
 export default ListGroup;
