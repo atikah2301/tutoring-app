@@ -1,3 +1,22 @@
+:: JAVASCRIPT THEORY ::
+
+When creating a dictionary in JS, the elements inside are known as properties (the equivalent of key-value pairs or items in Python). These can be accessed using dot notation or backet notation, though the former is more common. 
+
+Example:
+person.name = 'Atikah';  // dictionary "person" has property "name" which are now changing to "Atikah"
+
+If we don't know at runtime which property will be changed, then bracket notation can be used, so we can pass a variable into the square brackets.
+
+Example:
+let selectedProperty = 'name';  // a string variable for the property
+person[selectedProperty] = 'Atikah';  // using the variable to acccess the property
+
+:: NODE THEORY ::
+
+Every web browser has a JS engine e.g. SpiderMonkey for FireFox and v8 for Chrome. Node JS was born when a developer took the open source v8 code and embedded it in a C++ program. Now we can run JS code outside of browsers, which enabled the use of JS to go beyond websites to other platforms like mobile.
+
+ECMAScript is a specification which JavaScript follows. Note: the ES7+ extension means ECMAScript 7.
+
 :: REACT THEORY ::
 
 HTML create a "Document Object Model" or DOM which is a tree like structure to organise and link all the web pages. 
@@ -50,5 +69,9 @@ win P to change multi screen to extension mode
 win arrows to shift the location and shape of current window
 win L to lock screen
 
+:: RESOURCES ::
 
+
+Your order ID: 130623057
+Coding with Mosh; React 18 the ultimate couse
 
