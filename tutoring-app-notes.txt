@@ -25,7 +25,14 @@ States are like the local variables inside a function for storing data about cha
 Props should be considered immutable, i.e. read-only, whereas states are data we expect will change.
 Changing a prop of a component from within a component after it has been declared is bad practice, i.e. an antipattern in React.
 
+Using the React Developer Tools Chrome Extension
 
+Download from Chrome store. Ctrl+Shift+C to open the Inspect window.
+Click the >> button next to Elements, Console etc. in the toolbar.
+Components and Profiler are the two new tools. 
+Components allows you to see the children, what component is rendering the currently selected component on screen, and search for components by name. 
+Click the eye icon to see the matching DOM element on screen.
+Click the </> icon to see the source code.
 
 :: SHORTCUTS ::
 
