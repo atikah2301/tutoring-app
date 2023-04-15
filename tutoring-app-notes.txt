@@ -1,0 +1,44 @@
+HTML create a "Document Object Model" or DOM which is a tree like structure to organise and link all the web pages
+
+Vanilla JS is plain JS with no third party code. 
+
+React removes the need to query DOM elements
+
+Instead it uses components to write reusable, modular code that abstract away some of the finer details.
+
+E.g. a button, a side bar, a grid of items etc. these are all components which come together to make the app.
+
+TS is used for plain typescript files, while TSX file extension is used for react components. either use a js class or js function. function based components are more popular these days so we will use. 
+
+in the project structure for the new web app, we have some config files for the typescript compiler, a node_modules folder, a "public" folder for certain assets, and then the source folder called "src" which contains our typescript and css files
+
+outside of this we have the index.html file which contains the project. it loads in the js and css files we will write.
+
+"How React Works"
+
+currently we have a component tree with parent (App) and child (Message). from this a Js structure is built called a virtual DOM. it's a light weight representation of the html DOM. the "nodes" in the virtual DOM are updated only when a change is made in the code in the components. react DOM is the library that enables these dynamic and fast changes to be implemented.
+
+this is the "react-dom" we see as a dependency for the project.
+
+library vs framework
+
+library provides specific functionality 
+
+framework is a set of tools and guidelines for building apps e.g. xamarin or .NET
+
+react is just a tool, i.e. lib, for building a dynamic and interactive UI. but we need other tools for routing, making http calls, managing app state, displaying animations, validating forms etc. we can use any tools for any of these jobs because react is not limited to a specific toolset.
+
+shortcuts
+on chrome
+control T for new tab
+control F5 for refresh page
+control tab to switch tabs
+control w to close current tab
+
+in vs code
+control d for multi cursor on selected text
+
+windows
+win P to change multi screen to extension mode
+win arrows to shift the location and shape of current window
+win L to lock screen
