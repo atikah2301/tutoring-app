@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 function ListGroup() {
   // let is for variables, const is for constants
   let items = ["New York", "Tokyo", "London", "Paris", "Madrid"];
   // items = [];
-  let selectedIndex = -1; // initialise as -1 so no list item will appear active
-
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   // declare that a variable will get its value from a function using = () => {} syntax
   const getMessage = () => {
     items.length === 0 && <p>No items found...</p>;
@@ -34,7 +35,7 @@ function ListGroup() {
               // below will give a "SyntheticBaseEvent" object,
               // a wrapper around the BaseEvent class
               onClick={() => {
-                selectedIndex = index;
+                setSelectedIndex(index);
               }}
               // unlike the use of getMessage, we are only referring to the function
               // not getting its output directly
