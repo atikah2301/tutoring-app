@@ -1,17 +1,29 @@
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 // import component from dot, the current directory
 
 // create the App as a component
 
 // START HERE - the function below will run the Alert component
 
+const handleButtonClick = () => {
+  console.log("Button clicked");
+};
+
 function App() {
+  // below, the colour prop of the Button component is optional
+  // if it has been set to a default value in the component funciton
+  // then it will be overridden here
   return (
     <div>
-      <Alert>
+      {/* <Alert>
         Hello <span>World</span>
-      </Alert>
+      </Alert> */}
+
+      <Button colour="success" onButtonClick={handleButtonClick}>
+        Atikah's button!
+      </Button>
     </div>
   );
 }
