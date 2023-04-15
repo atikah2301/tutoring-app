@@ -1,27 +1,43 @@
 import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 // import component from dot, the current directory
 
 // create the App as a component
+
+// START HERE - the function below will run the Alert component
+
 function App() {
-  // let is for variables, const is for constants
-  let items = ["New York", "Tokyo", "London", "Paris", "Madrid"];
-  // items = [];
-
-  // event handler - print the selected item string to the console onSelectItem
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectItem}
-      />
+      <Alert>
+        Hello <span>World</span>
+      </Alert>
     </div>
   );
 }
+
+// START HERE - the function below will run the ListGroup component
+
+// function App() {
+//   // let is for variables, const is for constants
+//   let items = ["New York", "Tokyo", "London", "Paris", "Madrid"];
+//   // items = [];
+
+//   // event handler - print the selected item string to the console onSelectItem
+//   const handleSelectItem = (item: string) => {
+//     console.log(item);
+//   };
+
+//   return (
+//     <div>
+//       <ListGroup
+//         items={items}
+//         heading="Cities"
+//         onSelectItem={handleSelectItem}
+//       />
+//     </div>
+//   );
+// }
 
 // Vite uses "hmr" i.e. "Hot Module Replacement" for live updates to the website as we save
 export default App;
