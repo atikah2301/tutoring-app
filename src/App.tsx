@@ -3,9 +3,13 @@ import ListGroup from "./components/ListGroup";
 
 // create the App as a component
 function App() {
+  // let is for variables, const is for constants
+  let items = ["New York", "Tokyo", "London", "Paris", "Madrid"];
+  // items = [];
+
   return (
     <div>
-      <ListGroup />
+      <ListGroup items={items} heading="Cities" />
     </div>
   );
 }

@@ -1,9 +1,14 @@
 import { useState } from "react";
 
-function ListGroup() {
-  // let is for variables, const is for constants
-  let items = ["New York", "Tokyo", "London", "Paris", "Madrid"];
-  // items = [];
+// instead of hardcoding "items", we can make variables to store them
+// these are not properties i.e. props, stored in an interface object
+// this interface will be passed to the function ListGroup
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   // declare that a variable will get its value from a function using = () => {} syntax
   const getMessage = () => {
@@ -16,7 +21,7 @@ function ListGroup() {
   return (
     // empty angle brackets wrapping components creates a fragment, i.e. <div><div/>
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {getMessage()}
       <ul className="list-group">
         {items.map(
