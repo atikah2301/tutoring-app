@@ -9,7 +9,20 @@ Bootstrap 5, unlike previous iterations of it, does not have JQuery as a depende
 At the start of a project using Bootstrap, in the "index.html" file's boilerplate code, add the CDN link from the Bootstrap documentation to the <head>. The link is something like <link href="https://cdn.jsdelivr.net...>.
 
 
+:: INTEGRATING BACKEND & FRONTEND ::
 
+In the package.json file, we add a "proxy" to the local host port 5000 which is serving the backend, so the react project has acccess to it as well as its own port 3000. 
+
+We also add a "start-flask-api" command to "scripts" which will run the flask backend at the same time as the react frontend. We use the "--no-debugger" flag because we don't need it as we are only using flask for APIs. We never serve a page directly.
+
+If we had tests, we would also add to "scripts" a command called "test-api" : "cd api && flask test".
+
+Note that the command is written in bash. This is because there is an underlying terminal being used which makes it system agnostic.
+
+Web Programming with Flask Harvard CS50
+https://youtu.be/zdgYw-3tzfI
+
+MVC: Model, View, Controller design pattern. Model is the data stored and called upon to be displayed on a website. View is the aesthetics and front end. Controller is the backend business logic.
 
 
 :: JAVASCRIPT THEORY ::
@@ -74,7 +87,6 @@ To enable someone to easily install the required packagaes for the project, a re
 To create this file:
 - Install "pipreqs" and use command "pipreqs" in the project folder. Note: this only works for libraries actively being imported into the project, not ones working in the background.
 - Use command "pip freeze > requirements.txt" to load in everything listed in your current venv.
-
 
 :: SHORTCUTS ::
 
