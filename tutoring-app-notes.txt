@@ -1,3 +1,17 @@
+:: BOOTSTRAP THEORY ::
+
+Web dev framework using HTML and CSS for pre-made templates for widgets, interactions etc. to make front-end development and UI design much easier. 
+
+In order to fully customise off Bootstrap, you would need to download the source code along with the Sass compiler.
+
+Bootstrap 5, unlike previous iterations of it, does not have JQuery as a dependency.
+
+At the start of a project using Bootstrap, in the "index.html" file's boilerplate code, add the CDN link from the Bootstrap documentation to the <head>. The link is something like <link href="https://cdn.jsdelivr.net...>.
+
+
+
+
+
 :: JAVASCRIPT THEORY ::
 
 When creating a dictionary in JS, the elements inside are known as properties (the equivalent of key-value pairs or items in Python). These can be accessed using dot notation or backet notation, though the former is more common. 
@@ -53,6 +67,15 @@ Components allows you to see the children, what component is rendering the curre
 Click the eye icon to see the matching DOM element on screen.
 Click the </> icon to see the source code.
 
+:: REQUIREMENTS ::
+
+To enable someone to easily install the required packagaes for the project, a requirements.txt file is required. A user can do "pip install -r requirements.txt" to download every package at its specified version listed in this fil.e 
+
+To create this file:
+- Install "pipreqs" and use command "pipreqs" in the project folder. Note: this only works for libraries actively being imported into the project, not ones working in the background.
+- Use command "pip freeze > requirements.txt" to load in everything listed in your current venv.
+
+
 :: SHORTCUTS ::
 
 ___Chrome____
@@ -62,7 +85,12 @@ control tab to switch tabs
 control w to close current tab
 
 ___VS Code___
-control d for multi cursor on selected text
+ctrl+D for multi-cursor editing..
+i.e. jump to the next instance of the highlighted text
+
+ctrl+P+M to open search bar for files, but don't do M first because ctrl+M toggles the use of the tab key
+
+ctrl+Shift+P to open command pallette, wrap with abbev to nest highlighted code in a div
 
 ___Windows OS___
 win P to change multi screen to extension mode
