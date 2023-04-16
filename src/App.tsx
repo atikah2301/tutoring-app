@@ -1,7 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
-// import component from dot, the current directory
 
 // create the App as a component
 
@@ -44,8 +43,8 @@ function App() {
 //   // items = [];
 
 //   // event handler - print the selected item string to the console onSelectItem
-//   const handleSelectItem = (item: string) => {
-//     console.log(item);
+//   const handleSelectItem = (item: string, index: number) => {
+//     console.log(item, index);
 //   };
 
 //   return (

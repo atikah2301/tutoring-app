@@ -8,12 +8,13 @@ interface ListGroupProps {
   heading: string;
   // this property is a function that allows us to notify the App component
   // of when an item has been selected
-  onSelectItem: (item: string) => void;
+  onSelectItem: (item: string, index: number) => void;
 }
 
 function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   // declare that a variable will get its value from a function using = () => {} syntax
+
   const getMessage = () => {
     items.length === 0 && <p>No items found...</p>;
     // items.length === 0 ? <p>No items found...</p> : null;
@@ -47,7 +48,7 @@ function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
               // a wrapper around the BaseEvent class
               onClick={() => {
                 setSelectedIndex(index);
-                onSelectItem(item);
+                onSelectItem(item, index);
               }}
               // unlike the use of getMessage, we are only referring to the function
               // not getting its output directly
