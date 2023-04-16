@@ -21,6 +21,14 @@ function App() {
         Hello <span>World</span>
       </Alert> */}
 
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div className="container-fluid">
+          <a href="navbar" className="navbar-brand mb-0 h1">
+            11+ Maths Tutoring
+          </a>
+        </div>
+      </nav>
+
       <Button colour="success" onButtonClick={handleButtonClick}>
         Atikah's button!
       </Button>
@@ -53,11 +61,3 @@ function App() {
 
 // Vite uses "hmr" i.e. "Hot Module Replacement" for live updates to the website as we save
 export default App;
-
-// ctrl+D for multi-cursor editing..
-// i.e. jump to the next instance of the highlighted text
-
-// ctrl+P+M to open search bar for files
-
-// ctrl+Shift+P to open command pallette, wrap with abbev
-// to nest highlighted code in a div
